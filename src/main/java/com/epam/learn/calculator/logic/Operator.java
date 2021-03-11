@@ -1,9 +1,8 @@
-package com.epam.learn;
+package com.epam.learn.calculator.logic;
 
 import java.math.BigDecimal;
 import java.math.RoundingMode;
 import java.util.Deque;
-import java.util.Queue;
 
 public enum Operator {
     ADD(1, "+") {
@@ -35,7 +34,7 @@ public enum Operator {
         public void evaluate(Deque<BigDecimal> numbers, Deque<Operator> operatorStack) {
             BigDecimal right = numbers.pop();
             BigDecimal left = numbers.pop();
-            numbers.push(left.divide(right,2, RoundingMode.HALF_UP));
+            numbers.push(left.divide(right, 2, RoundingMode.HALF_UP));
         }
     },
     OPEN_BRACKET(Integer.MIN_VALUE, "(") {
