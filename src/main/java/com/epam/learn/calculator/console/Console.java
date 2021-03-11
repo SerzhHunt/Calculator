@@ -16,6 +16,7 @@ public class Console implements Runnable {
     public void run() {
         Calculator calculator = Calculator.getInstance();
         Logger logger = LogManager.getLogger();
+
         try (BufferedReader reader = new BufferedReader(new InputStreamReader(System.in))) {
             logger.log(Level.INFO, "Enter your expression. Use space to separate number and operands");
 

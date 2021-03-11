@@ -15,6 +15,7 @@
         <maven.compiler.plugin>3.8.1</maven.compiler.plugin>
         <JUnit.version>5.7.0</JUnit.version>
         <log4j.version>2.14.0</log4j.version>
+        <main.class.path>com.epam.learn.Main</main.class.path>
     </properties>
 
     <dependencies>
@@ -60,7 +61,7 @@
                 <configuration>
                     <archive>
                         <manifest>
-                            <mainClass>com.epam.learn.Main</mainClass>
+                            <mainClass>${main.class.path}</mainClass>
                         </manifest>
                     </archive>
                     <descriptorRefs>
